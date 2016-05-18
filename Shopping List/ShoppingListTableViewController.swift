@@ -43,20 +43,22 @@ class ShoppingListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath)
 
         //TODO: Assign the textLabel for the cell equal to the item in the listData Array at the indexPath.row value
-        
+        cell.textLabel?.text = listData[indexPath.row];
      
         return cell
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+        let detailView = segue.destinationViewController as! ViewItemController
+        
         // Pass the selected object to the new view controller.
+        detailView.itemImageView.image = UIImage(named:"bread")
     }
-    */
+    
 
 }
