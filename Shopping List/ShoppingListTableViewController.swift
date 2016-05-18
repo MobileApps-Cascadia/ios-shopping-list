@@ -38,16 +38,16 @@ class ShoppingListTableViewController: UITableViewController {
     }
 
     
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath)
 
-        //TODO: Assign the textLabel for the cell equal to the item in the listData Array
+        //TODO: Assign the textLabel for the cell equal to the item in the listData Array at the indexPath.row value
+        
      
         return cell
-
     }
-    */
+    
 
     /*
     // MARK: - Navigation
