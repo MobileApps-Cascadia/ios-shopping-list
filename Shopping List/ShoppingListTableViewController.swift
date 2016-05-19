@@ -42,7 +42,9 @@ class ShoppingListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath)
 
         //TODO: Assign the textLabel for the cell equal to the item in the listData Array at the indexPath.row value
-        cell.textLabel?.text = listData[indexPath.row];
+        let itemName = listData[indexPath.row]
+        cell.textLabel?.text = itemName
+        cell.imageView?.image = UIImage(named: itemName.lowercaseString)
      
         return cell
     }
@@ -55,8 +57,11 @@ class ShoppingListTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         let detailView = segue.destinationViewController as! ViewItemController
         
-        // Pass the selected object to the new view controller.
-        detailView.itemImageView.image = UIImage(named:"bread")
+        let indexPath = self.tableView.indexPathForSelectedRow
+        
+        // Pass the selected object name to the new view controller.
+        detailView.itemName = listData[indexPath!.row]
+        
     }
     
 

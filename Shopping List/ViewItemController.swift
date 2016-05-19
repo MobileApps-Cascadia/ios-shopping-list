@@ -11,11 +11,20 @@ import UIKit
 class ViewItemController: UIViewController {
 
    
+    var itemName : String?
+    
     @IBOutlet weak var itemImageView: UIImageView!
+    
+    @IBOutlet weak var itemLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Test if the itemName has a value
+        if let myItem = itemName {
+        itemImageView?.image = UIImage(named: myItem.lowercaseString)
+        itemLabel.text = myItem
+        }
     }
 
     override func didReceiveMemoryWarning() {
