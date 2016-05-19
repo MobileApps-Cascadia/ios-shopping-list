@@ -11,8 +11,7 @@ import UIKit
 
 class ShoppingListTableViewController: UITableViewController {
     
-    var listData = ["Bread", "Broccoli", "Carrots", "Cheese", "Eggs"]
-
+    var listData = ["Bread", "Brocolli", "Carrots", "Cheese", "Eggs"]
     
     // MARK: UIViewController lifecycle
     override func viewDidLoad() {
@@ -43,7 +42,9 @@ class ShoppingListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath)
 
         //TODO: Assign the textLabel for the cell equal to the item in the listData Array at the indexPath.row value
-        
+        let itemName = listData[indexPath.row]
+        cell.textLabel?.text = itemName
+        cell.imageView?.image = UIImage(named: itemName.lowercaseString)
      
         return cell
     }
