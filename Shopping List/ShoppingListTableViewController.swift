@@ -11,8 +11,7 @@ import UIKit
 
 class ShoppingListTableViewController: UITableViewController {
     
-    var listData = ["Bread", "Broccoli", "Carrots", "Cheese", "Eggs"]
-
+    var listData = ["Bread", "Brocolli", "Carrots", "Cheese", "Eggs"]
     
     // MARK: UIViewController lifecycle
     override func viewDidLoad() {
